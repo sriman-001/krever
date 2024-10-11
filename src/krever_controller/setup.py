@@ -6,7 +6,7 @@ package_name = 'krever_controller'
 
 setup(
     name=package_name,
-    version='0.0.0',
+    version='0.0.1',
     packages=find_packages(exclude=['test']),
     data_files=[
         # Install the package.xml
@@ -22,7 +22,6 @@ setup(
 
         # Install the Xacro files
         (os.path.join('share', package_name, 'xacro'), glob('xacro/*.xacro')),
-
 
         
     ],
