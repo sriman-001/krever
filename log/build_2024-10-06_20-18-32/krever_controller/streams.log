@@ -1,0 +1,24 @@
+[0.299s] Invoking command in '/home/parallels/project/krever/src/krever_controller': PYTHONPATH=/home/parallels/project/krever/build/krever_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/parallels/project/krever/install/krever_controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/krever_controller build --build-base /home/parallels/project/krever/build/krever_controller/build install --record /home/parallels/project/krever/build/krever_controller/install.log --single-version-externally-managed install_data
+[0.408s] running egg_info
+[0.408s] writing ../../build/krever_controller/krever_controller.egg-info/PKG-INFO
+[0.408s] writing dependency_links to ../../build/krever_controller/krever_controller.egg-info/dependency_links.txt
+[0.408s] writing entry points to ../../build/krever_controller/krever_controller.egg-info/entry_points.txt
+[0.408s] writing requirements to ../../build/krever_controller/krever_controller.egg-info/requires.txt
+[0.408s] writing top-level names to ../../build/krever_controller/krever_controller.egg-info/top_level.txt
+[0.409s] reading manifest file '../../build/krever_controller/krever_controller.egg-info/SOURCES.txt'
+[0.410s] writing manifest file '../../build/krever_controller/krever_controller.egg-info/SOURCES.txt'
+[0.410s] running build
+[0.410s] running build_py
+[0.410s] copying krever_controller/first_node.py -> /home/parallels/project/krever/build/krever_controller/build/lib/krever_controller
+[0.410s] running install
+[0.410s] running install_lib
+[0.410s] copying /home/parallels/project/krever/build/krever_controller/build/lib/krever_controller/first_node.py -> /home/parallels/project/krever/install/krever_controller/lib/python3.10/site-packages/krever_controller
+[0.411s] byte-compiling /home/parallels/project/krever/install/krever_controller/lib/python3.10/site-packages/krever_controller/first_node.py to first_node.cpython-310.pyc
+[0.411s] running install_data
+[0.411s] running install_egg_info
+[0.412s] removing '/home/parallels/project/krever/install/krever_controller/lib/python3.10/site-packages/krever_controller-0.0.0-py3.10.egg-info' (and everything under it)
+[0.412s] Copying ../../build/krever_controller/krever_controller.egg-info to /home/parallels/project/krever/install/krever_controller/lib/python3.10/site-packages/krever_controller-0.0.0-py3.10.egg-info
+[0.413s] running install_scripts
+[0.422s] Installing test_node script to /home/parallels/project/krever/install/krever_controller/lib/krever_controller
+[0.423s] writing list of installed files to '/home/parallels/project/krever/build/krever_controller/install.log'
+[0.435s] Invoked command in '/home/parallels/project/krever/src/krever_controller' returned '0': PYTHONPATH=/home/parallels/project/krever/build/krever_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/parallels/project/krever/install/krever_controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/krever_controller build --build-base /home/parallels/project/krever/build/krever_controller/build install --record /home/parallels/project/krever/build/krever_controller/install.log --single-version-externally-managed install_data
