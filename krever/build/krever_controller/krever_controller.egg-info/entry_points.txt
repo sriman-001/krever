@@ -1,3 +1,0 @@
-[console_scripts]
-test_node = krever_controller.first_node:main
-
