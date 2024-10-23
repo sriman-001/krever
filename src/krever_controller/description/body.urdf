@@ -16,31 +16,33 @@
      
     
     <link name="base_footprint"/>
+    
 
 
 <!--base chassis-->
     <link name="base_link">
         <visual>
             <geometry>
-                <box size="0.8 0.6 0.3"/>
+                <box size="0.6 0.6 0.2"/>
             </geometry>
-            <origin xyz="0 0 0.15" rpy="0 0 0"/>
+            <origin xyz="0 0 0.125" rpy="0 0 0"/>
             <material name="red"/>
         </visual>
 
         <collision>
             <geometry>
-                <box size="0.6 0.8 0.3"/>
+                <box size="0.6 0.6 0.2"/>
             </geometry>
-            <origin xyz="0 0 0.15" rpy="0 0 0"/>
+            <origin xyz="0 0 0.125" rpy="0 0 0"/>
             <material name="red"/>
         </collision>
+
     </link>
 
     <joint name="base_joint" type="fixed">
         <parent link="base_footprint"/>
         <child link="base_link"/>
-        <origin xyz="0 0 0.1" rpy="0 0 0"/>
+        <origin xyz="0 0 0.0" rpy="0 0 0"/>
     </joint>
 
 
@@ -61,12 +63,13 @@
             <origin xyz="0 0 0" rpy="0 0 0"/>
             <material name="blue"/>
         </collision>
+
     </link>
 
     <joint name="base_lidar_joint" type="fixed">
         <parent link="base_link"/>
         <child link="lidar"/>
-        <origin xyz="0 0 0.325" rpy="0 0 0"/>
+        <origin xyz="0 0 0.25" rpy="0 0 0"/>
     </joint>
 
 
@@ -74,24 +77,26 @@
     <link name="left_wheel">
         <visual>
             <geometry>
-                <cylinder radius="0.1" length="0.05"/>
+                <cylinder radius="0.1" length="0.03"/>
             </geometry>
             <origin xyz="0 0 0" rpy="1.57 0 0"/>
             <material name="green"/>
         </visual>
         <collision>
             <geometry>
-                <cylinder radius="0.1" length="0.05"/>
+                <cylinder radius="0.1" length="0.03"/>
             </geometry>
             <origin xyz="0 0 0" rpy="1.57 0 0"/>
             <material name="green"/>
         </collision>
+
+        
     </link>
 
     <joint name="base_left_wheel_joint" type="continuous">
     <parent link="base_link"/>
         <child link="left_wheel"/>
-        <origin xyz="0 0.325 0" rpy="0 0 0"/>
+        <origin xyz="0 0.315 0.05" rpy="0 0 0"/>
         <axis xyz="0 1 0"/>
     </joint>
 
@@ -100,24 +105,26 @@
     <link name="right_wheel">
         <visual>
             <geometry>
-                <cylinder radius="0.1" length="0.05"/>
+                <cylinder radius="0.1" length="0.03"/>
             </geometry>
             <origin xyz="0 0 0" rpy="1.57 0 0"/>
             <material name="green"/>
         </visual>
         <collision>
             <geometry>
-                <cylinder radius="0.1" length="0.05"/>
+                <cylinder radius="0.1" length="0.03"/>
             </geometry>
             <origin xyz="0 0 0" rpy="1.57 0 0"/>
             <material name="green"/>
         </collision>
+
+        
     </link>
 
     <joint name="base_right_wheel_joint" type="continuous">
         <parent link="base_link"/>
         <child link="right_wheel"/>
-        <origin xyz="-0 -0.325 0" rpy="0 0 0"/>
+        <origin xyz="-0 -0.315 0.05" rpy="0 0 0"/>
         <axis xyz="0 1 0"/>
     </joint>
 
@@ -125,48 +132,54 @@
     <link name="caster_wheel1">
         <visual>
             <geometry>
-                <sphere radius="0.05"/>
+                <sphere radius="0.025"/>
             </geometry>
             <origin xyz="0 0 0" rpy="1.57 0 0"/>
             <material name="blue"/>
         </visual>
         <collision>
             <geometry>
-                <sphere radius="0.05"/>
+                <sphere radius="0.025"/>
             </geometry>
             <origin xyz="0 0 0" rpy="1.57 0 0"/>
             <material name="blue"/>
         </collision>
+
+        
+    
     </link>
     
     <joint name="body_caster_wheel_joint1" type="fixed">
         <parent link="base_link"/>
         <child link="caster_wheel1"/>
-        <origin xyz="0.3 0 -0.05" rpy="0 0 0"/>
+        <origin xyz="0.25 0 0.0" rpy="0 0 0"/>
     </joint>
 
 <!-- caster wheel2 -->
     <link name="caster_wheel2">
         <visual>
             <geometry>
-                <sphere radius="0.05"/>
+                <sphere radius="0.025"/>
             </geometry>
             <origin xyz="0 0 0" rpy="1.57 0 0"/>
             <material name="blue"/>
         </visual>
         <collision>
             <geometry>
-                <sphere radius="0.05"/>
+                <sphere radius="0.025"/>
             </geometry>
             <origin xyz="0 0 0" rpy="1.57 0 0"/>
             <material name="blue"/>
         </collision>
+
+        
+        
     </link>
     
     <joint name="body_caster_wheel_joint2" type="fixed">
         <parent link="base_link"/>
         <child link="caster_wheel2"/>
-        <origin xyz="-0.3 0 -0.05" rpy="0 0 0"/>
+        <origin xyz="-0.25 0 0.0" rpy="0 0 0"/>
     </joint>
 
 
@@ -175,7 +188,7 @@
     <link name="support_rod">
         <visual>
             <geometry>
-                <box size="0.1 0.1 1.07" />
+                <box size="0.06 0.1 1.07" />
             </geometry>
             <material name="LightGrey">
                 <color rgba="0.7 0.7 0.7 1.0"/>
@@ -183,13 +196,15 @@
         </visual>
         <collision>
             <geometry>
-                <box size="0.1 0.1 1.07" />
+                <box size="0.06 0.1 1.07" />
             </geometry>
         </collision>
+
+        
     </link>
 
     <joint name="base_suppot_joint" type="fixed">
-        <origin xyz="-0.35 0. 0.835" rpy="0.0 0.0 0.0"/>
+        <origin xyz="-0.265 0. 0.76" rpy="0.0 0.0 0.0"/>
         <parent link="base_link"/>
         <child link="support_rod"/>
         <limit lower="0.0" upper="0.0" effort="0.0" velocity="0.0"/>
@@ -200,7 +215,7 @@
     <link name="u1">
         <visual>
             <geometry>
-                <box size="0.6 0.1 0.04" />
+                <box size="0.4 0.1 0.04" />
             </geometry>
             <material name="black">
                 <color rgba="0 0 0 1"/>
@@ -208,9 +223,12 @@
         </visual>
         <collision>
             <geometry>
-                <box size="0.6 0.1 0.04" />
+                <box size="0.4 0.1 0.04" />
             </geometry>
         </collision>
+
+        
+
     </link>
 
     <joint name="u1" type="fixed">
@@ -236,10 +254,13 @@
                 <box size="0.6 0.1 0.04" />
             </geometry>
         </collision>
+
+        
+
     </link>
 
     <joint name="u2" type="fixed">
-        <origin xyz="0.25 0.35 0.555" rpy="0.0 0.0 0"/>
+        <origin xyz="0.25 0.25 0.555" rpy="0.0 0.0 0"/>
         <parent link="support_rod"/>
         <child link="u2"/>
         <limit lower="0.0" upper="0.0" effort="0.0" velocity="0.0"/>
@@ -262,10 +283,12 @@
                 <box size="0.6 0.1 0.04" />
             </geometry>
         </collision>
+
+        
     </link>
 
     <joint name="u3" type="fixed">
-        <origin xyz="0.25 -0.35 0.555" rpy="0.0 0.0 0"/>
+        <origin xyz="0.25 -0.25 0.555" rpy="0.0 0.0 0"/>
         <parent link="support_rod"/>
         <child link="u3"/>
         <limit lower="0.0" upper="0.0" effort="0.0" velocity="0.0"/>
@@ -276,7 +299,7 @@
         <visual>
             <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
             <geometry>
-                <box size="0.65 0.8 0.01"/>
+                <box size="0.6 0.6 0.01"/>
             </geometry>
             <material name="white">
                 <color rgba="1.0 1.0 1.0 1.0"/>
@@ -285,13 +308,15 @@
         <collision>
             <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
             <geometry>
-                <box size="0.65 0.8 0.01"/>
+                <box size="0.6 0.6 0.01"/>
             </geometry>
         </collision>
+
+        
     </link>
 
     <joint name="joint_name" type="fixed">
-        <origin xyz="0.375 0.0 -0.465" rpy="0.0 0.0 0.0"/>
+        <origin xyz="0.27 0.0 -0.465" rpy="0.0 0.0 0.0"/>
         <parent link="support_rod"/>
         <child link="tray"/>
         <limit lower="0.0" upper="0.0" effort="0.0" velocity="0.0"/>
